@@ -11,9 +11,22 @@ a multi-line message with two image attachments.
 
 '''
 
-import mailupdater
+import mailupdater, os
 
 def main():
+
+    # Make sure test image files exist.
+    # In this demonstration, 32x32 pixel images of
+    # a horse and car will be emailed to you.
+
+    FILE_DIRECTORY = os.path.dirname(__file__)
+    SAMPLE_FOLDER = os.path.join(FILE_DIRECTORY, "samples")
+    HORSE_IMAGE = os.path.join(SAMPLE_FOLDER, "horse.png")
+    CAR_IMAGE = os.path.join(SAMPLE_FOLDER, "car.png")
+    assert os.path.isfile(HORSE_IMAGE) and os.path.isfile(CAR_IMAGE)
+    
+    # Acquire email account username
+
     username = input("Enter username: ")
 
     # The program uses Gmail as the default host.
@@ -38,8 +51,8 @@ def main():
         was trained on CIFAR10.
         ''')
 
-        email2.attach("samples/horse.png")
-        email2.attach("samples/car.png")
+        email2.attach(HORSE_IMAGE)
+        email2.attach(CAR_IMAGE)
 
         # Writing to the email multiple times is supported.
 

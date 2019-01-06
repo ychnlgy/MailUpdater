@@ -8,7 +8,7 @@ For the program to work, **you must enable [less secure app access](https://myac
 
 ## Quickstart
 
-See this [example](example.py).
+See this [example](mailupdater/example.py).
 
 ## Installation
 
