@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="mailupdater",
-    version="1.0.2",
+    version="1.0.4",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     description="Easily send mail updates to yourself.",
@@ -12,12 +12,4 @@ setuptools.setup(
     license="MIT",
     packages=setuptools.find_packages(),
     include_package_data=True
-#    py_modules=[
-#        "mailupdater",
-#        "example",
-#        
-#        "src/__init__",
-#        "src/Email",
-#        "src/EmailService",
-#    ],
 )
