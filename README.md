@@ -8,6 +8,21 @@ For the program to work, **you must enable [less secure app access](https://myac
 
 ## Quickstart
 
+```python3
+
+import mailupdater
+
+username = input("Email address: ")
+
+service = mailupdater.Service(username)
+
+with service.create("Hello world") as email:
+    email.write("Python is great for sending emails.")
+
+# A new email will appear in your inbox.
+
+```
+
 See this [example](mailupdater/example.py).
 
 ## Installation
