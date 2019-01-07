@@ -38,7 +38,7 @@ class Email:
     def export(self):
         msg = MIMEMultipart()
         msg["From"] = self.service.username
-        msg["To"] = self.service.username
+        msg["To"] = ", ".join(self.service.recipients)
         msg["Subject"] = self.subject
         
         body = "\r\n".join(self.body)

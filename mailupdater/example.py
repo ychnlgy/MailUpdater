@@ -58,6 +58,15 @@ def main():
 
         email2.write("Please enjoy it.")
         email2.write("Regards,\n\nMr. Onion\n")
+        
+    # Sending emails to multiple people
+    
+    recipients = list(map(str.strip, input("Enter recipients (comma-separated): ").split(",")))
+    
+    service = mailupdater.Service(username, recipients)
+    
+    with service.create("Party invitation") as email3:
+        email3.write("Come to my party!")
 
 if __name__ == "__main__":
     main()
