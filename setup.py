@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="mailupdater",
-    version="0.0.1",
+    version="0.0.2",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     description="Easily send mail updates to yourself.",

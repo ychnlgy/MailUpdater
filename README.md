@@ -46,6 +46,24 @@ with service.create("Reminder") as email:
 
 ```
 
+Sending emails to multiple recipients is easy:
+
+```python3
+
+import mailupdater
+
+username = "jon@mail1.com"
+recipients = ["mary@mail2.com", "bob@mail3.com"]
+
+service = mailupdater.Service(username, recipients)
+
+with service.create("Party invitation") as email:
+    email.write("Come to my party!")
+
+# All recipients, including yourself, will recieve the email.
+
+```
+
 ## Installation
 
 ```bash
