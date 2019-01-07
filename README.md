@@ -2,10 +2,6 @@
 
 A Python module for easily sending mail updates to yourself.
 
-This program only works for Gmail at the moment.
-
-For the program to work, **you must enable [less secure app access](https://myaccount.google.com/security).**
-
 ## Quickstart
 
 ```python3
